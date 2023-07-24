@@ -1,0 +1,17 @@
+a{
+    text-decoration: none;
+    color: #292929;
+}
+a:hover{
+    color: #919191;
+}
+
+.centered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.margined{
+    margin: 20px;
+}

@@ -1,0 +1,17 @@
+{%extends "layout.html"%}
+
+{%block body%}
+<div class = "centered margined">
+    <form action = "/register" method = "post" >
+        <label for = "username">Username:</label> <br/>
+        <input name = "username" type = "text"> <br/>
+        <label for = "password">Password:</label> <br/>
+        <input name = "password" type = "password"> <br/>
+        <label for = "confirmation">Confirm Password:</label> <br/>
+        <input name = "confirmation" type = "password"> <br/><br/>
+        <button type = "submit" class = "btn btn-outline-primary">Register</button>
+    </form>
+</div>
+
+
+{%endblock%}
