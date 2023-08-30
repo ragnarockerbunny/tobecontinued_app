@@ -1,16 +1,16 @@
 :root{
-    --primary-dark: #2B061E;
+    --primary-dark: #11040D;
     --primary-light: #875053;
-    --grey-dark: #292929;
-    --grey-light: #919191;
+    --grey-dark: #271321;
+    --grey-light: #403A45;
     --main-light: #FFFEF3;
 }
 
-body{
+.bg-secondary-light{
     background-color: var(--main-light);
 }
 
-nav{
+.bg-primary-light{
     background-color: var(--primary-light);
 }
 
@@ -20,6 +20,24 @@ a{
 }
 a:hover{
     color: var(--grey-light);
+}
+
+span, i, div, p, h1, h2, h3, h4{
+    color: var(--grey-dark);
+}
+
+button i{
+    border: 1px solid var(--grey-dark);
+    box-sizing: border-box;
+    padding : 10px;
+    border-radius: 20%;
+}
+
+button i:hover{
+    border: 1px solid var(--grey-dark);
+    background-color: var(--grey-dark);
+    color: var(--main-light);
+    border-radius: 20%;
 }
 
 .centered{
@@ -43,5 +61,6 @@ a:hover{
 #tbc_logo {
     display: inline-block;
     width: 50%;
-    height: auto;   
+    height: auto;
+    color: var(--primary-dark)
 }

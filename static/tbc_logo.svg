@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="3.5611111"
-     inkscape:cx="97.862715"
-     inkscape:cy="86.349454"
+     inkscape:cx="98.00312"
+     inkscape:cy="86.068643"
      inkscape:window-width="1600"
      inkscape:window-height="837"
      inkscape:window-x="-8"
@@ -48,7 +48,7 @@
      id="layer1">
     <text
        xml:space="preserve"
-       style="font-size:96.4596px;fill:#000000;stroke-width:1.13039"
+       style="font-size:96.4596px;fill:#271321;stroke-width:1.13039;fill-opacity:1"
        x="6.6252394"
        y="102.03621"
        id="text2"
@@ -56,11 +56,11 @@
          id="tspan2"
          x="6.6252394"
          y="102.03621"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans Bold';stroke-width:1.13039"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans Bold';stroke-width:1.13039;fill:#271321;fill-opacity:1"
          sodipodi:role="line">TBC</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans Italic';fill:#1a1a1a;fill-opacity:1;stroke-width:0.9531"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans Italic';fill:#271321;fill-opacity:1;stroke-width:0.9531"
        x="12.286704"
        y="145.9185"
        id="text23"
@@ -69,6 +69,6 @@
          x="12.286704"
          y="145.9185"
          id="tspan24"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans Italic';stroke-width:0.9531">To Be Continued...</tspan></text>
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans Italic';stroke-width:0.9531;fill:#271321;fill-opacity:1">To Be Continued...</tspan></text>
   </g>
 </svg>
