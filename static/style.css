@@ -1,9 +1,25 @@
+:root{
+    --primary-dark: #2B061E;
+    --primary-light: #875053;
+    --grey-dark: #292929;
+    --grey-light: #919191;
+    --main-light: #FFFEF3;
+}
+
+body{
+    background-color: var(--main-light);
+}
+
+nav{
+    background-color: var(--primary-light);
+}
+
 a{
     text-decoration: none;
-    color: #292929;
+    color: var(--grey-dark);
 }
 a:hover{
-    color: #919191;
+    color: var(--grey-light);
 }
 
 .centered{
@@ -27,6 +43,5 @@ a:hover{
 #tbc_logo {
     display: inline-block;
     width: 50%;
-    height: auto;
-    
+    height: auto;   
 }

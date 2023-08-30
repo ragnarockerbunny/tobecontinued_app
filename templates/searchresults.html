@@ -3,16 +3,14 @@
 {% block body %}
     
     <h1>Results</h1>
-    <ul>
-        {%for item in results%}
-        <li>
-            <h3>{{item["original_title"]}}, {{item["release_date"]}}</h3>
-            <p>{{item["overview"]}}</p>
-            <form action = "/addToList" method = "post">
-                <input type = "hidden" name = "item_id" value = "{{ item["id"] }}">
-                <button type="submit" class="btn btn-primary"><i class="bi bi-star-fill"></i></button>
-            </form>
-        </li>{%endfor%}
-    </ul>
+    {%for item in results%}
+        <form action = "/addToList" method = "post">
+            <input type = "hidden" name = "item_id" value = "{{ item["id"] }}">
+            <button type="submit" class="btn btn-primary"><i class="bi bi-star-fill"></i></button>
+            <span class = "watchlist_item">{{item["original_title"]}}, {{item["release_date"]}}</span>
+        </form>
+        <p>{{item["overview"]}}</p>
+        
+    {%endfor%}
     
 {% endblock %}
