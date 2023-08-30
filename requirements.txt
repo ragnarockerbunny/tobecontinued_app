@@ -1,4 +1,4 @@
 Flask
 Gunicorn
 SQLAlchemy
-Session
+flask_session
