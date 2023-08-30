@@ -10,7 +10,7 @@
         <form action = "/remove" method = "post">
             <input type = "hidden" name = "film_id" value = "{{item['film_id']}}">
             <button type = "submit" class="btn"><i class="bi bi-trash-fill"></i></button>
-            <span class = "watchlist_item">{{item["name"]}}</span>
+            <span class = "watchlist_item">{{item["name"]}}, {{item["release_date"]}}</span>
         </form>
     </div>
     {%endfor%}
