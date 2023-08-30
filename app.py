@@ -137,7 +137,7 @@ def addToList():
             db.execute(text("INSERT INTO watchlist(user_id, film_id, date_added) VALUES (:uid, :fid, :d)"), {"uid": _userid, "fid":_item_id, "d": date.today().isoformat()})
             db.commit()
     
-    return render_template("addedToList.html")
+    return redirect("/")
 
 @app.route("/remove", methods = ["POST"])
 def remove():
