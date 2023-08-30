@@ -6,24 +6,39 @@
         </meta>
         <!--Include Bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <!--Boostrap Icons-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <!--Include CSS-->
         <link href="static/style.css" rel = "stylesheet">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="/">To Be Continued</a>
-              <a href = "/register">Register</a>
-              <a href = "/login">Log In</a>
+              <a class="navbar-brand" href="/"><img id = "tbc_logo" src="/static/tbc_logo.svg"></a>
+              {% if session["username"]%}
+                <a href = "/logout">Log Out</a>
+                <p class = "centered">{{session["username"]}}</p>
+              {% else %}
+                <a href = "/register">Register</a>
+                <a href = "/login">Log In</a>
+              {% endif %}
+              
               <div id="navbarSupportedContent">
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex" role="search" action = "/search" method = "post">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name = "query">
                   <button class="btn btn-outline-success" type="submit">Search</button>
                   
                 </form>
               </div>
             </div>
-          </nav>
-        {% block body %}{% endblock %}
+        </nav>
+        <div class = "margined_wide">
+          {% block body %}{% endblock %}
+        </div>
+        <footer>
+          <div class = "centered">
+            <p>film data provided by <a href = "https://www.themoviedb.org/" target = "_blank"><img src="/static/tmdb_logo.svg" alt = "The Movie Database"></a></p>
+          </div>
+        </footer>
     </body>
 </html>

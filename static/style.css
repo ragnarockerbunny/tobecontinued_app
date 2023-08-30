@@ -15,3 +15,18 @@ a:hover{
 .margined{
     margin: 20px;
 }
+
+.margined_wide{
+    margin: 60px;
+}
+
+.watchlist_item {
+    font-weight:600;
+}
+
+#tbc_logo {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    
+}
