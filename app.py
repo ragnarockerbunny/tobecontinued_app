@@ -105,15 +105,18 @@ def register():
 
 @app.route("/search", methods = ["GET", "POST"])
 def search():
-    if request.method == "GET":
-        return render_template("search.html")
-    if request.method == "POST":
-        _query = request.form.get("query")
-        _url = 'https://api.themoviedb.org/3/search/movie?query=' + _query + '&api_key=' + TMDB_API_KEY
-        _response = requests.get(_url)
-        _results = _response.json()["results"]
-        #print(json.dumps(_response.json(), sort_keys=True, indent=2))
-        return render_template("searchresults.html", results = _results)
+    if "username" in session:
+        if request.method == "GET":
+            return render_template("search.html")
+        if request.method == "POST":
+            _query = request.form.get("query")
+            _url = 'https://api.themoviedb.org/3/search/movie?query=' + _query + '&api_key=' + TMDB_API_KEY
+            _response = requests.get(_url)
+            _results = _response.json()["results"]
+            #print(json.dumps(_response.json(), sort_keys=True, indent=2))
+            return render_template("searchresults.html", results = _results)
+    else: 
+        return redirect("/")
 
 @app.route("/addToList", methods = ["POST"])
 def addToList():

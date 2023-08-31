@@ -26,14 +26,14 @@ span, i, div, p, h1, h2, h3, h4{
     color: var(--grey-dark);
 }
 
-button i{
+button i, .mybutton{
     border: 1px solid var(--grey-dark);
     box-sizing: border-box;
     padding : 10px;
     border-radius: 20%;
 }
 
-button i:hover{
+button i:hover, .mybutton:hover{
     border: 1px solid var(--grey-dark);
     background-color: var(--grey-dark);
     color: var(--main-light);
