@@ -26,8 +26,6 @@ A page with a log in form for users
 A page users are directed to after a succesful log out
 - register.html:
 A page with a form for registering users
-- search.html:
-A page with a form for searching. Mostly vestigial, there's a search bar in the nav that's more convenient to use
 - searchresults.html
 A page that displays the results of a search.
 
@@ -41,4 +39,4 @@ For the front end I imported the bootstrap CSS library as well as the bootstrap 
 
 I created a little SVG logo using the program Inkscape to serve both as a link to return to home and as a branding touch in the nav element.
 
-There are many other unnamed, perhaps even unconscious decisions that I've made regarding the design of the web app, I feel that I have touched on all the most important aspects. Thank you for reading, and this was CS50!
+There are many other unnamed, perhaps even unconscious decisions that I've made regarding the design of the web app, I feel that I have touched on all the most important aspects. In conclusion, and this was CS50!

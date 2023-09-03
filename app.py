@@ -2,7 +2,7 @@ from flask import Flask, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 from sqlalchemy import create_engine, text
-from datetime import date
+from datetime import date, datetime
 import requests
 import json
 #init
@@ -103,11 +103,9 @@ def register():
 
         return redirect("/")
 
-@app.route("/search", methods = ["GET", "POST"])
+@app.route("/search", methods = ["POST"])
 def search():
     if "username" in session:
-        if request.method == "GET":
-            return render_template("search.html")
         if request.method == "POST":
             _query = request.form.get("query")
             _url = 'https://api.themoviedb.org/3/search/movie?query=' + _query + '&api_key=' + TMDB_API_KEY
@@ -116,7 +114,7 @@ def search():
             #print(json.dumps(_response.json(), sort_keys=True, indent=2))
             return render_template("searchresults.html", results = _results)
     else: 
-        return redirect("/")
+        return redirect("/login")
 
 @app.route("/addToList", methods = ["POST"])
 def addToList():
@@ -124,6 +122,7 @@ def addToList():
     #append id to database
     #remember to commit as you go
     _item_id = request.form.get("item_id")
+    _film_name = request.form.get("film_name")
     if not _item_id:
         return error("Something went wrong with the film id")
     with engine.connect() as db:
@@ -137,7 +136,7 @@ def addToList():
         if db.execute(text("SELECT * FROM watchlist WHERE user_id = :uid AND film_id = :fid"), {"uid": session["user_id"], "fid": _item_id}).all():
             return error("Film already in watchlist")
         else:
-            db.execute(text("INSERT INTO watchlist(user_id, film_id, date_added) VALUES (:uid, :fid, :d)"), {"uid": _userid, "fid":_item_id, "d": date.today().isoformat()})
+            db.execute(text("INSERT INTO watchlist(user_id, film_id, film_name, date_added) VALUES (:uid, :fid, :fn, :d)"), {"uid": _userid, "fid":_item_id, "fn":_film_name, "d": datetime.now().isoformat()})
             db.commit()
     
     return redirect("/")

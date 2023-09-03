@@ -5,7 +5,8 @@
     <h1>Results</h1>
     {%for item in results%}
         <form action = "/addToList" method = "post">
-            <input type = "hidden" name = "item_id" value = "{{ item["id"] }}">
+            <input type = "hidden" name = "item_id" value = "{{ item['id'] }}">
+            <input type = "hidden" name = "film_name" value = "{{item['original_title']}}">
             <button type="submit" class="btn"><i class="bi bi-star-fill"></i></button>
             <span class = "watchlist_item">{{item["original_title"]}}, {{item["release_date"]}}</span>
         </form>
