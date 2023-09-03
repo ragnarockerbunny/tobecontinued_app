@@ -1,5 +1,5 @@
 # To Be Continued
-#### Video Demo:  <URL HERE>
+#### Video Demo: https://youtu.be/_DPFseEaMJw
 #### Description:
 To Be Continued is a web app built to solve the issue of keeping track what films a user wants to watch. As such, users can create an account, they will be given a watchlist and by consuming the The Movie Database's web api, they can keep track of films they want to watch. Built with HTML, CSS, JINJA, SQL and Python.
 
@@ -35,8 +35,8 @@ For the sitemap I also decided to keep it as simple as possible. A home page tha
 
 As for the film database I briefly considered populating a database of my own or asking users to populate the database for me but in the end decided to rather go with a free API. This required learning a bit about using APIs in conjunction with Python and Flask but amounted mostly to just including the requests library and using the get method provided, as well as reading through the documentation.
 
-For the front end I imported the bootstrap CSS library as well as the bootstrap icons library, and combined it with my own CSS. I tried to simplify down to a three colors and keep the scheme unified that way. Not everything looks as clean or as professional as I want it to but at some point one must hand in.
-
 I created a little SVG logo using the program Inkscape to serve both as a link to return to home and as a branding touch in the nav element.
+
+For the front end I imported the bootstrap CSS library as well as the bootstrap icons library, and combined it with my own CSS. I tried to simplify down to a three colors and keep the scheme unified that way. 
 
 There are many other unnamed, perhaps even unconscious decisions that I've made regarding the design of the web app, I feel that I have touched on all the most important aspects. In conclusion, and this was CS50!
